@@ -22,6 +22,8 @@ const Dot = () => {
         }
     }, [mousePosition.x, mousePosition.y]);
 
+    if (!mousePosition.x || !mousePosition.y) return null;
+
     return (
         <div
             className="h-10 w-10 fixed rounded-full bg-red-600/30 pointer-events-none origin-center flex justify-center items-center"
